@@ -40,6 +40,9 @@ const CategoryList = () => {
       const res = await getCategories(); // expects res.data.data
       const list = res.data?.data ?? [];
       const hierarchical = buildHierarchy(list);
+      console.log(list);
+      console.log(hierarchical);
+
       setTree(hierarchical);
       setFilteredTree(hierarchical);
     } catch (err) {

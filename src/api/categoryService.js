@@ -10,7 +10,9 @@ const api = axios.create({
 
 // Fetch all categories with parent info and image details
 export const getCategories = () =>
-  api.get("/items/categories?fields=id,name,parent.id,parent.name,image.*");
+  api.get(
+    "/items/categories?fields=id,name,parent.id,parent.name,image.*,children.*&limit=-1"
+  );
 
 // Fetch single category
 export const getCategory = (id) =>
