@@ -18,7 +18,7 @@ const CategoryCard = React.memo(({ category, level = 0, onEdit, onDelete }) => {
   const indent = level * 20;
 
   const imageUrl = category.image
-    ? `${process.env.REACT_APP_API_BASE_URL}/assets/${category.image.id}`
+    ? `${import.meta.env.VITE_API_BASE_URL}/assets/${category.image.id}`
     : null;
 
   const handleToggle = useCallback(() => setOpen((s) => !s), []);

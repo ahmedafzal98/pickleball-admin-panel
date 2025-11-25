@@ -1,10 +1,10 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: process.env.REACT_APP_API_BASE_URL,
+  baseURL: import.meta.env.VITE_API_BASE_URL, // Vite env variable
   headers: {
     "Content-Type": "application/json",
-    Authorization: `Bearer ${process.env.REACT_APP_DIRECTUS_TOKEN}`,
+    Authorization: `Bearer ${import.meta.env.VITE_DIRECTUS_TOKEN}`, // Vite env variable
   },
 });
 
